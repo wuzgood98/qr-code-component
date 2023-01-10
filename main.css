@@ -1,0 +1,123 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --grayish-blue-alpha: hsla(219, 15%, 55%, 0.195);
+  --dark-blue: hsl(218, 44%, 22%);
+  --small: 15px;
+  --outfit: 'Outfit',
+    sans-serif;
+  --normal: 400;
+  --bold: 700;
+  --full: 100%;
+}
+
+:is(*, ::after, ::before) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: var(--full);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray);
+  padding: 30px;
+  font-family: var(--outfit);
+}
+
+main {
+  --border: 5px;
+  --radius: 20px;
+  width: var(--full);
+  max-width: 316px;
+  background-color: var(--white);
+  border-radius: calc(var(--radius) + var(--border));
+  min-height: 490px;
+  padding: 16px;
+  -webkit-box-shadow: 6.5px 13px 32px 14.5px var(--grayish-blue-alpha);
+  -moz-box-shadow: 6.5px 13px 32px 14.5px var(--grayish-blue-alpha);
+  box-shadow: 6.5px 13px 32px 14.5px var(--grayish-blue-alpha);
+  animation: fadeIn .6s forwards;
+}
+
+main img {
+  width: var(--full);
+  border-radius: var(--radius);
+}
+
+main .description {
+  text-align: center;
+  padding: 1.4rem 1rem 0;
+}
+
+main .description h1 {
+  font-size: 1.3rem;
+  font-weight: var(--bold);
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+}
+
+main .description p {
+  font-size: var(--small);
+  font-weight: var(--normal);
+  color: var(--grayish-blue);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+.attribution a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: color .5s ease-in-out;
+}
+
+.attribution a:hover {
+  color: hsl(228, 45%, 44%);
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
